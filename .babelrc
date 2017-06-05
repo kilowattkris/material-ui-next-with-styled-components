@@ -1,0 +1,16 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "flow"
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-remove-prop-types",
+        "transform-react-constant-elements",
+        "transform-flow-strip-types"
+        ]
+    }
+  }
+}

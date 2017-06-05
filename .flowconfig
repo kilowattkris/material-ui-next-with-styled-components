@@ -1,0 +1,30 @@
+[include]
+
+[ignore]
+<PROJECT_ROOT>/dist/.*
+
+# Including these files causes issues
+.*/node_modules/fbjs/.*
+.*/node_modules/jsonlint/.*
+.*/node_modules/react-event-listener/src/index.js
+.*/node_modules/styled-components/.*
+.*/node_modules/jss/.*
+.*/node_modules/material-ui/.*
+.*/node_modules/polished/.*
+
+[libs]
+<PROJECT_ROOT>/flowTyped/
+
+[options]
+module.use_strict=true
+
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+
+#for using material-ui grid
+unsafe.enable_getters_and_setters=true
+
+# for css modules
+module.name_mapper='.+\(.s?css\)' -> 'CSSModule'
+
+[version]
